@@ -1,0 +1,81 @@
+ <!-- <div>
+
+    <h2 *ngFor="let tabledata of tableList.data">
+            {{tabledata}}      
+    </h2>
+
+ </div> -->
+ 
+ 
+
+
+
+<div class="container">
+    <table class="table table-trapped" cellspacing="20">
+        <thead>
+            <th>Check</th>
+            <th>No.</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>        
+            <th>Profile</th> 
+            <th>Action</th>
+           
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let tabledata of tableList.data">
+                <td><input type="checkbox"></td>
+                <td>{{tabledata.id}}</td>
+                <td>{{tabledata.first_name}}</td> 
+                <td>{{tabledata.last_name}}</td> 
+                <td>{{tabledata.email}} </td>     
+                <td><img src="{{tabledata.avatar}}" alt="{{tabledata.first_name0}}" ></td>
+                 
+                <td>
+                    <button  class="actionbutton" mat-button [matMenuTriggerFor]="menu"><span>&#8942;</span></button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item  (click)="openDialog(tabledata.id,tabledata.first_name,tabledata.last_name,tabledata.email,tabledata.avatar)"><i class="material-icons" style="font-size:12px">&#xe7fd;</i> Profile</button>
+                        <button mat-menu-item><i class="material-icons" style="font-size:12px">&#xe0bc;</i> Redial</button>
+                        <button mat-menu-item><i class="material-icons" style="font-size:12px">&#xe0d9;</i>  Check voice Mail</button>
+                        <button mat-menu-item><i class="fas fa-bell-slash " ></i> Disable alerts</button>
+                       
+                      </mat-menu>      
+                </td>
+                         
+            </tr>
+        </tbody>
+    </table>
+
+
+     
+
+    
+</div>
+
+<!-- <div class="container">
+    <table class="table table-trapped">
+        <thead>
+            <th>Check</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Profile</th>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let data of userData">
+                <td><input type="checkbox"></td>
+                <td>{{data.name}}</td>
+                <td>{{data.addr}}</td>
+                <td>{{data.profile}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+   
+
+</div> -->
+
+
+ 
+ 

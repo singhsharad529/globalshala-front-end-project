@@ -1,0 +1,19 @@
+span {
+    content: "\22EE";
+    font-weight: bolder;
+  }
+
+  img{
+      width: 60px;
+      border-radius: 7px;
+  }
+
+  .actionbutton{
+    border: none;
+    background-color: white
+    ;width: 40px;
+  }
+
+  .actionbutton:hover{
+      background-color:lightgrey;
+  }
